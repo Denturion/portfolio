@@ -14,7 +14,7 @@ export default function App() {
 			>
 				<Header />
 
-				<main>
+				<main className='w-full max-w-4xl mx-auto px-10'>
 					<section
 						id='hero'
 						className='min-h-screen flex items-center justify-center'

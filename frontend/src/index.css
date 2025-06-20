@@ -26,3 +26,73 @@ html.dark body {
 		background-position: 100% 100%;
 	}
 }
+
+.has-blur-gradient::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	pointer-events: none;
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+	-webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+	opacity: 0;
+	transition: opacity 0.4s ease;
+}
+.blur-active::before {
+	opacity: 1;
+}
+
+.clip-diagonal-frame {
+	clip-path: polygon(
+		20px 0%,
+		100% 0%,
+		100% calc(100% - 20px),
+		calc(100% - 20px) 100%,
+		0% 100%,
+		0% 20px
+	);
+	position: relative;
+}
+
+.clip-diagonal-frame::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+
+	pointer-events: none;
+	z-index: 2;
+	background: linear-gradient(
+		120deg,
+		rgba(255, 255, 255, 0.2) 20%,
+		rgba(255, 255, 255, 0.7) 50%,
+		rgba(255, 255, 255, 0.2) 80%
+	);
+	opacity: 0.7;
+	mix-blend-mode: lighten;
+	animation: shine 1.2s linear infinite;
+	clip-path: inherit;
+}
+
+.clip-diagonal {
+	clip-path: polygon(
+		20px 0%,
+		100% 0%,
+		100% calc(100% - 20px),
+		calc(100% - 20px) 100%,
+		0% 100%,
+		0% 20px
+	);
+	position: relative;
+	z-index: 10;
+}
+
+@keyframes shine {
+	0% {
+		background-position: -200% 0;
+	}
+	100% {
+		background-position: 200% 0;
+	}
+}

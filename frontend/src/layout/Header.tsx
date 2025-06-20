@@ -3,11 +3,20 @@ import { useLightModeContext } from '../context/LightModeContext';
 import { FiSun, FiMoon } from 'react-icons/fi';
 import useActiveSection from '../hooks/useActiveSection';
 import HamburgerMenu from '../components/HamburgerMenu';
+import { useEffect, useState } from 'react';
 
 const Header = () => {
 	const { lightMode, toggleLightMode, animating } = useLightModeContext();
 	const sectionIds = ['hero', 'about', 'skills', 'projects', 'contact'];
 	const activeSection = useActiveSection(sectionIds);
+
+	const [scrolled, setScrolled] = useState(false);
+
+	useEffect(() => {
+		const onScroll = () => setScrolled(window.scrollY > 10);
+		window.addEventListener('scroll', onScroll);
+		return () => window.removeEventListener('scroll', onScroll);
+	}, []);
 
 	const links = [
 		{ href: '#', label: 'Start', section: 'hero' },
@@ -18,7 +27,14 @@ const Header = () => {
 	];
 
 	return (
-		<header className='fixed top-0 left-0 right-0 w-full bg-transparent z-50'>
+		<header
+			className={`fixed top-0 left-0 right-0 w-full z-50 transition-colors duration-300
+    ${
+			scrolled
+				? 'bg-gradient-to-b from-white/90 to-transparent dark:from-gray-900/90 dark:to-transparent'
+				: ''
+		}`}
+		>
 			<div className='container mx-auto flex items-center justify-between p-2 md:p-4'>
 				<div className='w-8' />
 
