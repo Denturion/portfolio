@@ -11,7 +11,7 @@ const Hero = () => {
 	};
 
 	return (
-		<section className='w-full flex justify-center'>
+		<section className='w-full flex items-center justify-center'>
 			<div className='w-full max-w-xl px-4 py-12 flex flex-col '>
 				<h1 className='text-3xl md:text-5xl font-bold mb-4' style={textStyle}>
 					Hi, I'm David!
@@ -27,7 +27,7 @@ const Hero = () => {
 						<img
 							src='/Profile.jpg'
 							alt='David'
-							className='w-full max-w-xs h-auto block'
+							className='w-full max-w-xs h-auto block scale-x-[-1]'
 						/>
 					</div>
 				</div>
