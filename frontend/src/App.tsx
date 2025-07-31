@@ -17,35 +17,35 @@ export default function App() {
 				<main className='w-full max-w-4xl mx-auto px-10'>
 					<section
 						id='hero'
-						className='min-h-screen flex items-center justify-center'
+						className='h-screen flex items-center justify-center'
 					>
 						<Hero />
 					</section>
 
 					<section
 						id='about'
-						className='min-h-screen flex items-center justify-center'
+						className='h-screen flex items-center justify-center'
 					>
 						<About />
 					</section>
 
 					<section
 						id='skills'
-						className='min-h-screen flex items-center justify-center'
+						className='h-screen flex items-center justify-center'
 					>
 						<Skills />
 					</section>
 
 					<section
 						id='projects'
-						className='min-h-screen flex items-center justify-center'
+						className='h-screen flex items-center justify-center'
 					>
 						<Projects />
 					</section>
 
 					<section
 						id='contact'
-						className='min-h-screen flex items-center justify-center'
+						className='h-screen flex items-center justify-center'
 					>
 						<Contact />
 					</section>
