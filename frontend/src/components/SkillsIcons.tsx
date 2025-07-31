@@ -16,6 +16,7 @@ import {
 	SiFigma,
 } from 'react-icons/si';
 import { useLightModeContext } from '../context/LightModeContext';
+import ScrollReveal from '../utils/scrollReveal';
 
 const SkillsIcons = () => {
 	const { lightMode, animating } = useLightModeContext();
@@ -105,44 +106,49 @@ const SkillsIcons = () => {
 	return (
 		<div className='flex flex-col items-center gap-8'>
 			{/* First row of dev skills */}
-			<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-10 gap-y-6 justify-items-center'>
-				{devSkills.map(({ name, icon }) => (
-					<div key={name} className='flex flex-col items-center space-y-1'>
-						{icon}
-						<span style={labelStyle} className='text-lg font-medium'>
-							{name}
-						</span>
-					</div>
-				))}
-			</div>
+			<ScrollReveal>
+				<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-10 gap-y-6 justify-items-center'>
+					{devSkills.map(({ name, icon }) => (
+						<div key={name} className='flex flex-col items-center space-y-1'>
+							{icon}
+							<span style={labelStyle} className='text-lg font-medium'>
+								{name}
+							</span>
+						</div>
+					))}
+				</div>
+			</ScrollReveal>
 
 			{/* Design skills row */}
-
-			<div className='col-span-full flex justify-center mt-4'>
-				<span
-					style={{
-						fontFamily: lightMode
-							? "'Roboto', sans-serif"
-							: "'Fira Mono', monospace",
-						transformOrigin: 'center',
-						transform: animating ? 'scaleX(0)' : 'scaleX(1)',
-						transition: 'transform 0.25s ease, font-family 0.25s ease',
-					}}
-					className='text-2xl text-center font-bold mt-5'
-				>
-					Design Skills
-				</span>
-			</div>
-			<div className='grid grid-cols-1  md:grid-cols-3 gap-x-10 gap-y-6 justify-items-center '>
-				{designSkills.map(({ name, icon }) => (
-					<div key={name} className='flex flex-col items-center space-y-1'>
-						{icon}
-						<span style={labelStyle} className='text-lg font-medium'>
-							{name}
-						</span>
-					</div>
-				))}
-			</div>
+			<ScrollReveal>
+				<div className='col-span-full flex justify-center mt-4'>
+					<span
+						style={{
+							fontFamily: lightMode
+								? "'Roboto', sans-serif"
+								: "'Fira Mono', monospace",
+							transformOrigin: 'center',
+							transform: animating ? 'scaleX(0)' : 'scaleX(1)',
+							transition: 'transform 0.25s ease, font-family 0.25s ease',
+						}}
+						className='text-2xl text-center font-bold mt-5'
+					>
+						Design Skills
+					</span>
+				</div>
+			</ScrollReveal>
+			<ScrollReveal>
+				<div className='grid grid-cols-1  md:grid-cols-3 gap-x-10 gap-y-6 justify-items-center '>
+					{designSkills.map(({ name, icon }) => (
+						<div key={name} className='flex flex-col items-center space-y-1'>
+							{icon}
+							<span style={labelStyle} className='text-lg font-medium'>
+								{name}
+							</span>
+						</div>
+					))}
+				</div>
+			</ScrollReveal>
 		</div>
 	);
 };
