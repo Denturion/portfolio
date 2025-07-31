@@ -17,35 +17,35 @@ export default function App() {
 				<main className='w-full max-w-4xl mx-auto px-2 sm:px-4 md:px-10'>
 					<section
 						id='hero'
-						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-10 px-10 mt-16 md:mt-0'
+						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-10 px-5 pt-24 md:pt-0'
 					>
 						<Hero />
 					</section>
 
 					<section
 						id='about'
-						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-16 px-10'
+						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-16 px-5'
 					>
 						<About />
 					</section>
 
 					<section
 						id='skills'
-						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-16 px-10'
+						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-16 px-5'
 					>
 						<Skills />
 					</section>
 
 					<section
 						id='projects'
-						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-16 px-10'
+						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-16 px-5'
 					>
 						<Projects />
 					</section>
 
 					<section
 						id='contact'
-						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-16 px-10'
+						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-16 px-5'
 					>
 						<Contact />
 					</section>
