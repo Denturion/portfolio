@@ -32,7 +32,7 @@ const About = () => {
 						transform: animating ? 'scaleX(0)' : 'scaleX(1)',
 						transition: 'transform 0.25s ease, font-family 0.25s ease',
 					}}
-					className='flex flex-col gap-8 md:w-1/2 h-full justify-between'
+					className='flex flex-col gap-8 w-full md:w-1/2 h-full justify-between'
 				>
 					<li className='flex items-center gap-5'>
 						<span className={iconClass}>{lightMode ? '💻' : <FiCode />}</span>

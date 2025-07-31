@@ -26,7 +26,7 @@ const Hero = () => {
 	});
 
 	return (
-		<section className='w-full flex items-center justify-center'>
+		<section className='w-full flex flex-col md:flex-row items-center justify-center'>
 			{/* Left: Text */}
 			<div className='w-full max-w-xl px-2 py-12 flex flex-col '>
 				<h1 className='text-3xl md:text-3xl font-bold mb-4' style={textStyle}>
@@ -38,7 +38,7 @@ const Hero = () => {
 					frontends to robust backends, I build high-quality digital solutions
 					with a design-first mindset.
 				</p>
-				<p className='text-lg md:text-xl font-semibold mt-2' style={textStyle}>
+				<p className='text-m md:text-xl font-semibold mt-2' style={textStyle}>
 					I enjoy{' '}
 					<span className='text-indigo-600 dark:text-yellow-300'>{text}</span>
 					<Cursor />

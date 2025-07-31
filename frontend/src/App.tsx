@@ -14,38 +14,38 @@ export default function App() {
 			>
 				<Header />
 
-				<main className='w-full max-w-4xl mx-auto px-10'>
+				<main className='w-full max-w-4xl mx-auto px-2 sm:px-4 md:px-10'>
 					<section
 						id='hero'
-						className='h-screen flex items-center justify-center'
+						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-10 px-10'
 					>
 						<Hero />
 					</section>
 
 					<section
 						id='about'
-						className='h-screen flex items-center justify-center'
+						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-16 px-10'
 					>
 						<About />
 					</section>
 
 					<section
 						id='skills'
-						className='h-screen flex items-center justify-center'
+						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-16 px-10'
 					>
 						<Skills />
 					</section>
 
 					<section
 						id='projects'
-						className='h-screen flex items-center justify-center'
+						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-16 px-10'
 					>
 						<Projects />
 					</section>
 
 					<section
 						id='contact'
-						className='h-screen flex items-center justify-center'
+						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-16 px-10'
 					>
 						<Contact />
 					</section>
