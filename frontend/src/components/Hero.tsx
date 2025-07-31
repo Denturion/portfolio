@@ -29,10 +29,10 @@ const Hero = () => {
 		<section className='w-full flex flex-col md:flex-row items-center justify-center'>
 			{/* Left: Text */}
 			<div className='w-full max-w-xl px-2 py-12 flex flex-col '>
-				<h1 className='text-3xl md:text-3xl font-bold mb-4' style={textStyle}>
+				<h1 className='text-2xl md:text-2xl font-bold mb-4' style={textStyle}>
 					Turning ideas into elegant code.
 				</h1>
-				<p className='text-base md:text-xl mb-6' style={textStyle}>
+				<p className='text-base md:text-xl mb-6 md:mr-2' style={textStyle}>
 					I'm David, a fullstack developer passionate about crafting intuitive
 					user experiences and clean, maintainable code. From interactive
 					frontends to robust backends, I build high-quality digital solutions
