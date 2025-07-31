@@ -1,5 +1,5 @@
 import { motion, useInView } from 'framer-motion';
-import { useRef, useState, type ReactNode } from 'react';
+import { useRef, useState, useEffect, type ReactNode } from 'react';
 import { useScrollDirection } from '../context/ScrollDirectionContext';
 
 interface ScrollRevealProps {
@@ -14,9 +14,11 @@ const ScrollReveal = ({ children }: ScrollRevealProps) => {
 		globalDirection
 	);
 
-	if (inView && localDirection !== globalDirection) {
-		setLocalDirection(globalDirection);
-	}
+	useEffect(() => {
+		if (inView) {
+			setLocalDirection(globalDirection);
+		}
+	}, [inView, globalDirection]);
 
 	const yValue = localDirection === 'up' ? 200 : -200;
 
