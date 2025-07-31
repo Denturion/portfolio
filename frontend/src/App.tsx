@@ -17,7 +17,7 @@ export default function App() {
 				<main className='w-full max-w-4xl mx-auto px-2 sm:px-4 md:px-10'>
 					<section
 						id='hero'
-						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-10 px-10 mt-16'
+						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-10 px-10 mt-16 md:mt-0'
 					>
 						<Hero />
 					</section>
