@@ -1,15 +1,8 @@
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
-import { useLightModeContext } from '../context/LightModeContext';
+import { useAnimatedStyle } from '../hooks/useAnimatedStyle';
 
 const Hero = () => {
-	const { lightMode, animating } = useLightModeContext();
-
-	const textStyle = {
-		fontFamily: lightMode ? "'Roboto', sans-serif" : "'Fira Mono', monospace",
-		transformOrigin: 'center',
-		transform: animating ? 'scaleX(0)' : 'scaleX(1)',
-		transition: 'transform 0.25s ease, font-family 0.25s ease',
-	};
+	const textStyle = useAnimatedStyle();
 
 	const [text] = useTypewriter({
 		words: [
@@ -28,7 +21,10 @@ const Hero = () => {
 	return (
 		<section className='w-full flex flex-col md:flex-row items-center justify-center'>
 			{/* Left: Text */}
-			<div className='w-full max-w-xl px-2 py-12 flex flex-col '>
+			<div
+				className='w-full max-w-xl px-2 py-12 flex flex-col '
+				style={{ minHeight: '320px' }}
+			>
 				<h1 className='text-2xl md:text-2xl font-bold mb-4' style={textStyle}>
 					Turning ideas into elegant code.
 				</h1>
@@ -51,7 +47,7 @@ const Hero = () => {
 						<img
 							src='/Profile.jpg'
 							alt='David'
-							className='w-full max-w-xs h-auto block scale-x-[-1]'
+							className='w-full max-w-xs h-auto block '
 						/>
 					</div>
 				</div>
