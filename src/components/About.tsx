@@ -1,9 +1,11 @@
 import { FiCode, FiMonitor, FiMusic, FiPenTool } from 'react-icons/fi';
 import { useLightModeContext } from '../context/LightModeContext';
+import { useAnimatedStyle } from '../hooks/useAnimatedStyle';
 import ScrollReveal from '../utils/scrollReveal';
 
 const About = () => {
-	const { lightMode, animating } = useLightModeContext();
+	const { lightMode } = useLightModeContext();
+	const animatedStyle = useAnimatedStyle();
 
 	const iconClass = 'text-indigo-600 dark:text-yellow-300 text-2xl';
 
@@ -11,14 +13,7 @@ const About = () => {
 		<div>
 			<ScrollReveal>
 				<h2
-					style={{
-						fontFamily: lightMode
-							? "'Roboto', sans-serif"
-							: "'Fira Mono', monospace",
-						transformOrigin: 'center',
-						transform: animating ? 'scaleX(0)' : 'scaleX(1)',
-						transition: 'transform 0.25s ease, font-family 0.25s ease',
-					}}
+					style={animatedStyle}
 					className='text-3xl md:text-5xl font-bold text-center mb-16'
 				>
 					About me
@@ -28,14 +23,7 @@ const About = () => {
 				<div className='flex flex-col md:flex-row gap-10 items-start md:items-center mb-6'>
 					{/* Left: Fun facts list */}
 					<ul
-						style={{
-							fontFamily: lightMode
-								? "'Roboto', sans-serif"
-								: "'Fira Mono', monospace",
-							transformOrigin: 'center',
-							transform: animating ? 'scaleX(0)' : 'scaleX(1)',
-							transition: 'transform 0.25s ease, font-family 0.25s ease',
-						}}
+						style={animatedStyle}
 						className='flex flex-col gap-8 w-full md:w-1/2 h-full justify-between'
 					>
 						<li className='flex items-center gap-5'>
@@ -74,17 +62,7 @@ const About = () => {
 						</li>
 					</ul>
 					{/* Right: Text block */}
-					<div
-						style={{
-							fontFamily: lightMode
-								? "'Roboto', sans-serif"
-								: "'Fira Mono', monospace",
-							transformOrigin: 'center',
-							transform: animating ? 'scaleX(0)' : 'scaleX(1)',
-							transition: 'transform 0.25s ease, font-family 0.25s ease',
-						}}
-						className='md:w-1/2'
-					>
+					<div style={animatedStyle} className='md:w-1/2'>
 						<p className='text-base md:text-xl'>
 							Hey! I'm a fullstack developer from Falun, Sweden, passionate
 							about building things that are both functional and beautiful. My

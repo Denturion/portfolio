@@ -49,7 +49,7 @@ export default function App() {
 
 					<section
 						id='skills'
-						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-16 px-5'
+						className='min-h-screen flex flex-col md:flex-row items-center justify-center py-24 px-5 pb-60 md:pb-0'
 					>
 						<Skills />
 					</section>

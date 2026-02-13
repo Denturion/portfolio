@@ -16,23 +16,18 @@ import {
 	SiFigma,
 } from 'react-icons/si';
 import { useLightModeContext } from '../context/LightModeContext';
+import { useAnimatedStyle } from '../hooks/useAnimatedStyle';
 import ScrollReveal from '../utils/scrollReveal';
 
 const SkillsIcons = () => {
 	const { lightMode, animating } = useLightModeContext();
+	const labelStyle = useAnimatedStyle();
 
 	const iconStyle = {
-		transformOrigin: 'center',
+		transformOrigin: 'center' as const,
 		transform: animating ? 'scaleX(0)' : 'scaleX(1)',
 		transition: 'transform 0.25s ease',
 		fontSize: '3.5rem', // text-6xl
-	};
-
-	const labelStyle = {
-		fontFamily: lightMode ? "'Roboto', sans-serif" : "'Fira Mono', monospace",
-		transformOrigin: 'center',
-		transform: animating ? 'scaleX(0)' : 'scaleX(1)',
-		transition: 'transform 0.25s ease, font-family 0.25s ease',
 	};
 
 	const devSkills = [

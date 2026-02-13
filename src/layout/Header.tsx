@@ -1,5 +1,5 @@
 import { useLightModeContext } from '../context/LightModeContext';
-
+import { useAnimatedStyle } from '../hooks/useAnimatedStyle';
 import { FiSun, FiMoon } from 'react-icons/fi';
 import useActiveSection from '../hooks/useActiveSection';
 import HamburgerMenu from '../components/HamburgerMenu';
@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 
 const Header = () => {
 	const { lightMode, toggleLightMode, animating } = useLightModeContext();
+	const animatedStyle = useAnimatedStyle();
 	const sectionIds = ['hero', 'about', 'skills', 'projects', 'contact'];
 	const activeSection = useActiveSection(sectionIds);
 
@@ -38,16 +39,9 @@ const Header = () => {
 			<div className='container mx-auto flex items-center justify-between p-2 md:p-4'>
 				<div className='w-8' />
 
-				<nav className=' hidden md:flex flex-row space-x-8 lg:space-x-16 xl:space-x-24 text-lg font-semibold mx-auto items-center'>
+				<nav className='hidden md:flex flex-row justify-between w-full max-w-2xl lg:max-w-3xl text-lg font-semibold mx-auto items-center'>
 					<a
-						style={{
-							fontFamily: lightMode
-								? "'Roboto', sans-serif"
-								: "'Fira Mono', monospace",
-							transformOrigin: 'center',
-							transform: animating ? 'scaleX(0)' : 'scaleX(1)',
-							transition: 'transform 0.25s ease, font-family 0.25s ease',
-						}}
+						style={animatedStyle}
 						href='#'
 						className={`hover:text-indigo-500 dark:hover:text-yellow-400 transition ${
 							activeSection === 'hero'
@@ -58,14 +52,7 @@ const Header = () => {
 						Start
 					</a>
 					<a
-						style={{
-							fontFamily: lightMode
-								? "'Roboto', sans-serif"
-								: "'Fira Mono', monospace",
-							transformOrigin: 'center',
-							transform: animating ? 'scaleX(0)' : 'scaleX(1)',
-							transition: 'transform 0.25s ease, font-family 0.25s ease',
-						}}
+						style={animatedStyle}
 						href='#about'
 						className={`hover:text-indigo-500 dark:hover:text-yellow-400 transition ${
 							activeSection === 'about'
@@ -76,14 +63,7 @@ const Header = () => {
 						About
 					</a>
 					<a
-						style={{
-							fontFamily: lightMode
-								? "'Roboto', sans-serif"
-								: "'Fira Mono', monospace",
-							transformOrigin: 'center',
-							transform: animating ? 'scaleX(0)' : 'scaleX(1)',
-							transition: 'transform 0.25s ease, font-family 0.25s ease',
-						}}
+						style={animatedStyle}
 						href='#skills'
 						className={`hover:text-indigo-500 dark:hover:text-yellow-400 transition ${
 							activeSection === 'skills'
@@ -94,14 +74,7 @@ const Header = () => {
 						Skills
 					</a>
 					<a
-						style={{
-							fontFamily: lightMode
-								? "'Roboto', sans-serif"
-								: "'Fira Mono', monospace",
-							transformOrigin: 'center',
-							transform: animating ? 'scaleX(0)' : 'scaleX(1)',
-							transition: 'transform 0.25s ease, font-family 0.25s ease',
-						}}
+						style={animatedStyle}
 						href='#projects'
 						className={`hover:text-indigo-500 dark:hover:text-yellow-400 transition ${
 							activeSection === 'projects'
@@ -112,14 +85,7 @@ const Header = () => {
 						Projects
 					</a>
 					<a
-						style={{
-							fontFamily: lightMode
-								? "'Roboto', sans-serif"
-								: "'Fira Mono', monospace",
-							transformOrigin: 'center',
-							transform: animating ? 'scaleX(0)' : 'scaleX(1)',
-							transition: 'transform 0.25s ease, font-family 0.25s ease',
-						}}
+						style={animatedStyle}
 						href='#contact'
 						className={`hover:text-indigo-500 dark:hover:text-yellow-400 transition ${
 							activeSection === 'contact'
@@ -135,7 +101,7 @@ const Header = () => {
 
 					<button
 						onClick={toggleLightMode}
-						className='text-xl p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition'
+						className='flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition'
 						aria-label='Toggle light mode'
 					>
 						<div

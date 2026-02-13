@@ -1,20 +1,10 @@
-import { useLightModeContext } from '../context/LightModeContext';
+import { useAnimatedStyle } from '../hooks/useAnimatedStyle';
 import ScrollReveal from '../utils/scrollReveal';
 
 const Contact = () => {
-	const { lightMode, animating } = useLightModeContext();
+	const animatedStyle = useAnimatedStyle();
 	return (
-		<div
-			className='w-full'
-			style={{
-				fontFamily: lightMode
-					? "'Roboto', sans-serif"
-					: "'Fira Mono', monospace",
-				transformOrigin: 'center',
-				transform: animating ? 'scaleX(0)' : 'scaleX(1)',
-				transition: 'transform 0.25s ease, font-family 0.25s ease',
-			}}
-		>
+		<div className='w-full' style={animatedStyle}>
 			<ScrollReveal>
 				<h2 className='text-3xl md:text-5xl text-center font-bold mb-16'>
 					Contact
