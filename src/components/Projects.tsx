@@ -19,16 +19,16 @@ const PROJECTS: Project[] = [
 		tech: ['NextJS', 'TypeScript', 'MongoDB', 'Tailwind'],
 	},
 	{
+		title: 'TypescriptLearning',
+		description: 'Simple app for learning Typescript.',
+		url: 'https://typescriptlearning.vercel.app/',
+		tech: ['React', 'Tailwind'],
+	},
+	{
 		title: 'Vanmakt Records',
 		description: 'Simple webshop for records.',
 		url: 'https://ecommerce-vercel-client.vercel.app/',
-		tech: ['React', 'Node.js', 'MongoDB'],
-	},
-	{
-		title: 'Project 3',
-		description: 'Another cool project.',
-		url: 'https://example.com',
-		tech: ['Vue', 'Firebase'],
+		tech: ['React', 'NodeJS', 'MongoDB', 'Tailwind'],
 	},
 ];
 
