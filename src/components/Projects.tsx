@@ -14,13 +14,13 @@ interface Project {
 const PROJECTS: Project[] = [
 	{
 		title: "Denturion's Nook",
-		description: 'A a book nook focused shop.',
+		description: 'A book nook focused shop.',
 		url: 'https://denturions-nook.vercel.app/',
 		tech: ['NextJS', 'NodeJS', 'MongoDB', 'Tailwind'],
 	},
 	{
 		title: 'FrameLog',
-		description: 'A movie tracking and logging application.',
+		description: 'Movie tracking and logging application.',
 		url: 'https://myframelog.vercel.app/',
 		tech: ['NextJS', 'TypeScript', 'MongoDB', 'Tailwind'],
 	},
