@@ -13,22 +13,25 @@ interface Project {
 
 const PROJECTS: Project[] = [
 	{
+		title: 'JS-to-WP Scaffolder',
+		description:
+			'A CLI that scaffolds modern WordPress plugins from a JSON config — OOP PHP, React admin pages, and REST API routes, in patterns JS devs already know.',
+		url: 'https://js-to-wp-scaffolder.vercel.app/',
+		tech: ['Node.js', 'React', 'PHP', 'Tailwind', 'WordPress'],
+	},
+	{
 		title: "Denturion's Nook",
-		description: 'A book nook focused shop.',
+		description:
+			'Browse and shop handcrafted book nooks — featuring product galleries, a cart system, and seamless checkout.',
 		url: 'https://denturions-nook.vercel.app/',
 		tech: ['NextJS', 'NodeJS', 'MongoDB', 'Tailwind'],
 	},
 	{
 		title: 'FrameLog',
-		description: 'Movie tracking and logging application.',
+		description:
+			'Track, rate, and review the movies you watch — with personal watchlists, a logging diary, and discovery tools.',
 		url: 'https://myframelog.vercel.app/',
 		tech: ['NextJS', 'TypeScript', 'MongoDB', 'Tailwind'],
-	},
-	{
-		title: 'TypescriptLearning',
-		description: 'Simple app for learning Typescript.',
-		url: 'https://typescriptlearning.vercel.app/',
-		tech: ['React', 'Tailwind'],
 	},
 ];
 
